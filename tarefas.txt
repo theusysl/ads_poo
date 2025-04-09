@@ -1,0 +1,65 @@
+1 - TAREFA: Crie um projeto com uma página HTML apresentando links para estes três sevlets:
+- SeuNomeServlet, que responda pela URL “seu-nome.html” e apresente seu RA em um H1, seu nome em um H2 e sua idade (desconsiderar o mês) em um H2
+- GreetingServlet, que responda pela url “greeting.html” e apresente a data/hora com mensagem “bom dia”, “boa tarde”, “boa noite” ou “vá dormir” em função do horário
+- RandomServlet, que responda pela URL “random.html” e apresente uma tabela com 6 números aleatórios não repetidos entre 1 e 60
+
+
+
+2 - TAREFA: Criar um projeto JavaEE com uma página index.html que apresente 2 links para a resposta dos seguintes servlets:
+- Api[SeuNome]Servlet, que responda pela url ‘seunome.json’ um arquivo em formato JSON com seu RA, seu nome e um array com as disciplinas cursadas por você neste semestre
+- ApiLoteriaServlet, que responda pela url ‘loteria.json’ um arquivo em formato JSON com a data/hora e um array com 6 números aleatórios não repetidos para tentar a sorte na loteria
+
+AULA 04: JavaEE (Introdução ao JavaEE)
+- Demonstração de um servlet que retorna uma imagem dinâmica
+- https://www.youtube.com/watch?v=bmrdnJqFfm4
+- Demonstração de um servlet que retorna um JSON
+- https://www.youtube.com/watch?v=mSr1KAtUvHk
+
+Link para envio da tarefa:
+https://forms.gle/gcarmxEKdRJrbQqS7
+
+
+
+3 - TAREFA:Crie um projeto de aplicação WEB com menu e as seguintes páginas jsp:
+- index.jsp, com sua identificação e um menu de links para as páginas
+- juros-simples.jsp, para cálculo e apresentação do valor futuro de um montante, taxa de juros (em %) e quantidade de meses informado pelo usuário
+- juros-compostos.jsp, para cálculo e apresentação da tabela de valores futuros acumulados por período de um montante, taxa de juros (em %) e quantidade de meses informado pelo usuário
+Considerações:
+- O menu deve ser feito utilizando jspf
+
+Formulário para envio da tarefa:
+https://forms.gle/bRCP5v2rT1e923Qg9
+
+AULA 07 - Diretivas JSP
+
+Vídeo:
+https://youtu.be/WB1He73DLeM?si=FpslwIfaCVXABnSU
+
+
+
+4 - TAREFA: Crie um projeto de aplicação WEB com menu e as seguintes páginas jsp:
+- index.jsp, com sua identificação e um menu de links para as páginas
+- juros-simples.jsp, para cálculo e apresentação do valor futuro de um montante, taxa de juros (em %) e quantidade de meses informado pelo usuário
+- juros-compostos.jsp, para cálculo e apresentação da tabela de valores futuros acumulados por período de um montante, taxa de juros (em %) e quantidade de meses informado pelo usuário
+Considerações:
+- O menu deve ser feito utilizando jspf
+
+AULA 06 - Diretivas JSP
+
+Vídeo:
+https://youtu.be/WB1He73DLeM?si=FpslwIfaCVXABnSU
+
+Formulário para envio da tarefa:
+https://forms.gle/bRCP5v2rT1e923Qg9
+
+
+
+5 - Crie um projeto de aplicação WEB com menu e as seguintes páginas jsp:
+- index.jsp, com sua identificação e um menu de links para as outras páginas
+- número-primo.jsp, que oferece um form para o usuário informar um número e responde na própria página se é um número primo ou, se não for, apresenta a lista de divisores do número informado
+- fibonacci.jsp, que oferece um form para o usuário informar um número e responde na própria página uma lista com os números da série de fibonacci até o índice informado pelo usuário
+- soma.jsp, que oferece um form para o usuário informar um número e responde na própria página a soma de todos os números entre 1 e o número informado pelo usuário
+Considerações:
+- O menu deve ser feito utilizando jspf
+
+Entrega: https://forms.gle/yYbzP7zvbeEjWY5N6
