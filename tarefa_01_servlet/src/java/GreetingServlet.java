@@ -49,18 +49,14 @@ public class GreetingServlet extends HttpServlet {
                 greeting = "vai dormir";
             }
             
-            out.println("<!DOCTYPE html>");
+            ouout.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Greeting</title>");
-            out.println("<style>");
-            out.println("body { font-family: sans-serif; text-align: center; padding-top: 50px; }");
-            out.println("h1 { color: #333; }");
-            out.println("p { font-size: 18px; color: #666; }");
-            out.println("</style>");
+            out.println("<link rel='stylesheet' href='../../../style.css'>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h4><a href = 'index.html'>Voltar</a></h4>");
+            out.println("<h4><a href='index.html'>Voltar</a></h4>");
             out.println("<h1>" + new java.util.Date() + "</h1>");
             out.println("<h2>" + greeting + "</h2>");
             out.println("</body>");
