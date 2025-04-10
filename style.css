@@ -7,3 +7,6 @@ body {
     margin: 0;
     padding: 0;
 }
+
+a:link {color: #89CFF0;}
+a:visited {color: #DDA0DD;}
