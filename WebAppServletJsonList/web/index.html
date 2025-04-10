@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <h1>Text List</h1>
+        <input type="text" v-model="newItem">
+        <button @click="add">+</button>
+        <ul>
+            <li v-for="(item, index) in items" :key="index">
+                {{ item }}
+                <button @click="remove(index)">-</button>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const {createApp} = Vue;
+
+        createApp({
+            data() {
+                return {
+                    items: [],
+                    newItem: ''
+                };
+            },
+            async created() {
+                await this.fetchData();
+            },
+            methods: {
+                async fetchData(newText, indexToRemove) {
+                    var url = 'list.json';
+                    if (newText) url = url + '?add&text='+newText; 
+                    if (indexToRemove >= 0) url = url + '?remove&i='+indexToRemove;
+                    const response = await fetch(url);
+                    const data = await response.json();
+                    this.items = data.list;
+                },
+                add() {
+                    this.fetchData(this.newItem);
+                    this.newItem = '';
+                },
+                remove(i) {
+                    this.fetchData(null, i);
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+
+</html>

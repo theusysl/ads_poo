@@ -49,7 +49,7 @@ public class GreetingServlet extends HttpServlet {
                 greeting = "vai dormir";
             }
             
-            ouout.println("<!DOCTYPE html>");
+            out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Greeting</title>");
