@@ -15,5 +15,6 @@
     <body>
         <%@include file="WEB-INF/jspf/menu.jspf" %>
         <h2>Fibonacci</h2>
+        <%@include file="WEB-INF/jspf/form_num.jspf" %>
     </body>
 </html>

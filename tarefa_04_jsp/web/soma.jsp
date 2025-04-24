@@ -15,5 +15,17 @@
     <body>
         <%@include file="WEB-INF/jspf/menu.jspf" %>
         <h2>Soma</h2>
+        <%@include file="WEB-INF/jspf/form_num.jspf" %>
+        <%
+            String n = request.getParameter("num");
+            int soma = 0;
+            if (n != null) {
+                int num = Integer.parseInt(n);
+                for (int i = 1; i <= num; i++) {
+                    soma += i;
+                }
+            }
+        %>
+        <p><%= soma %></p>
     </body>
 </html>
