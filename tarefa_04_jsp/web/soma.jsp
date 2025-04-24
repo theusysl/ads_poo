@@ -24,8 +24,8 @@
                 for (int i = 1; i <= num; i++) {
                     soma += i;
                 }
+                out.println("<p>Soma de todos os números até <strong>" + num + "</strong>: " + soma + "</p>");
             }
         %>
-        <p><%= soma %></p>
     </body>
 </html>
