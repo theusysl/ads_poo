@@ -20,24 +20,7 @@ https://forms.gle/gcarmxEKdRJrbQqS7
 
 
 
-3 - TAREFA:Crie um projeto de aplicação WEB com menu e as seguintes páginas jsp:
-- index.jsp, com sua identificação e um menu de links para as páginas
-- juros-simples.jsp, para cálculo e apresentação do valor futuro de um montante, taxa de juros (em %) e quantidade de meses informado pelo usuário
-- juros-compostos.jsp, para cálculo e apresentação da tabela de valores futuros acumulados por período de um montante, taxa de juros (em %) e quantidade de meses informado pelo usuário
-Considerações:
-- O menu deve ser feito utilizando jspf
-
-Formulário para envio da tarefa:
-https://forms.gle/bRCP5v2rT1e923Qg9
-
-AULA 07 - Diretivas JSP
-
-Vídeo:
-https://youtu.be/WB1He73DLeM?si=FpslwIfaCVXABnSU
-
-
-
-4 - TAREFA: Crie um projeto de aplicação WEB com menu e as seguintes páginas jsp:
+3 - TAREFA: Crie um projeto de aplicação WEB com menu e as seguintes páginas jsp:
 - index.jsp, com sua identificação e um menu de links para as páginas
 - juros-simples.jsp, para cálculo e apresentação do valor futuro de um montante, taxa de juros (em %) e quantidade de meses informado pelo usuário
 - juros-compostos.jsp, para cálculo e apresentação da tabela de valores futuros acumulados por período de um montante, taxa de juros (em %) e quantidade de meses informado pelo usuário
@@ -54,7 +37,7 @@ https://forms.gle/bRCP5v2rT1e923Qg9
 
 
 
-5 - Crie um projeto de aplicação WEB com menu e as seguintes páginas jsp:
+4 - Crie um projeto de aplicação WEB com menu e as seguintes páginas jsp:
 - index.jsp, com sua identificação e um menu de links para as outras páginas
 - número-primo.jsp, que oferece um form para o usuário informar um número e responde na própria página se é um número primo ou, se não for, apresenta a lista de divisores do número informado
 - fibonacci.jsp, que oferece um form para o usuário informar um número e responde na própria página uma lista com os números da série de fibonacci até o índice informado pelo usuário
@@ -63,3 +46,21 @@ Considerações:
 - O menu deve ser feito utilizando jspf
 
 Entrega: https://forms.gle/yYbzP7zvbeEjWY5N6
+
+
+
+5 - TAREFA: Criar um projeto de aplicação web com os seguintes requisitos:
+* Um servlet que responda um JSON através da url “/[seu nome].json” com seu RA, seu nome e um array com as disciplinas cursadas por você neste semestre
+* Um fragmento de página JSP chamado header.jspf que mostre um H1 com o nome da aplicação de sua livre escolha e um conjunto de links para as páginas abaixo
+* Uma página inicial “index.jsp” que mostre os dados lidos a partir do JSON
+* Uma página chamada “disciplinas.jsp” que mostre um HTML table com as disciplinas cursadas por você lidas a partir do JSON
+
+AULA 09: ServletContext, HttpSession e HttpRequest
+
+Links úteis:
+Use o fetch do javascript:
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+https://www.w3schools.com/jsref/api_fetch.asp
+Use a biblioteca https://alpinejs.dev/ para fazer as requisições dinâmicas
+
+Vídeo da aula: https://youtu.be/C6Lra39OzKs?si=kZhfsZzhOz3IL0YV
