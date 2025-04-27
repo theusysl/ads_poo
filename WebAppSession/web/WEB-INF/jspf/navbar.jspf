@@ -8,10 +8,12 @@
     if(request.getParameter("session-login")!=null){
         session.setAttribute("name", request.getParameter("session-name"));
         users.add((String) session.getAttribute("name"));
-        responde.sendRedirect(request.getRequestURI());
+        response.sendRedirect(request.getRequestURI());
     }else if(request.getParameter("session-logout")!=null){
+        int i = users.indexOf((String) session.getAttribute("name"));
         session.removeAttribute("name");
-        responde.sendRedirect(request.getRequestURI());
+        if(i>=0) users.remove(i);
+        response.sendRedirect(request.getRequestURI());
     }
     String userName = (String) session.getAttribute("name");
 %>

@@ -14,10 +14,12 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/navbar.jspf" %>
-        <div class="m-2">
-            <h2>Página Inicial</h2>
-            <div>Conteúdo da Página</div>
-        </div>
+        <%if (userName!=null) {%>
+            <div class="m-2">
+                <h2>Página Inicial</h2>
+                <div>Conteúdo da Página</div>
+            </div>
+        <%}%>
         <%@include file="WEB-INF/jspf/html_body_libs.jspf" %>
 
     </body>
