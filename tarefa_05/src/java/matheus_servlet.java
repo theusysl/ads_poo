@@ -22,7 +22,7 @@ public class matheus_servlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             JSONObject obj = new JSONObject();
             obj.put("nome", "Matheus");
-            obj.put("RA", "1290482322021");
+            obj.put("ra", "1290482322021");
             JSONArray arr = new JSONArray();
             arr.put("programação orientada a objetos");
             arr.put("engenharia de software 3");
