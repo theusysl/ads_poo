@@ -11,8 +11,8 @@
             <%@include file="WEB-INF/jspf/header.jspf" %>
         </div>
         
-        <div class="m-3 border rounded">
-            <table class="table table-hover">
+        <div class="m-3 border rounded d-inline-block">
+            <table class="table table-hover mb-0" style="width: auto;">
               <thead class="table-light">
                 <tr>
                   <th>Disciplinas Cursadas</th>
@@ -36,7 +36,7 @@
                     tabela.appendChild(linha);
                   });
                 })
-                .catch(error => console.error('deu ruim:', error));
+                .catch(error => console.error('erro:', error));
             </script>
         </div>
         

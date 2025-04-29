@@ -11,13 +11,21 @@
             <%@include file="WEB-INF/jspf/header.jspf" %>
         </div>
 
-        <div class="m-3 border rounded">
-            <table class="table table-hover">
-              <tbody>
-                <tr><td>RA: <span id="ra"></span></td></tr>
-                <tr><td>Nome: <span id="nome"></span></td></tr>
-              </tbody>
-            </table>
+        <div class="m-3 border rounded d-inline-block">
+            <table class="table table-hover mb-0" style="width: auto;">
+                <tbody>
+                  <tr>
+                    <td><strong>RA:</strong></td>
+                    <td><span id="ra"></span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Nome:</strong></td>
+                    <td><span id="nome"></span></td>
+                  </tr>
+                </tbody>
+              </table>
+
+
 
             <script>
               fetch('matheus.json')
@@ -26,7 +34,7 @@
                   document.getElementById('ra').innerText = data.ra;
                   document.getElementById('nome').innerText = data.nome;
                 })
-                .catch(error => console.error('deu ruim:', error));
+                .catch(error => console.error('erro:', error));
             </script>
         </div>
         
