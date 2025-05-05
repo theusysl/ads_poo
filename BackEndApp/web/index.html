@@ -8,6 +8,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <title>Test</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//unpkg.com/alpinejs" defer></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     </head>
     <body>
         <script>
@@ -20,27 +22,28 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 return response.json();
             }
             
-            request("http://localhost:8080/BackEndApp/tasks", "POST", { title: "Tarefa 1" }).then((data) => {
-                document.write("<hr>Posting 'Tarefa 1':<br>");
-                document.write(JSON.stringify(data));
-                request("http://localhost:8080/BackEndApp/tasks", "POST", { title: "Tarefa 2" }).then((data) => {
-                    document.write("<hr>Posting 'Tarefa 2':<br>");
-                    document.write(JSON.stringify(data));
-                    request("http://localhost:8080/BackEndApp/tasks", "GET").then((data) => {
-                        document.write("<hr>Getting:<br>");
-                        document.write(JSON.stringify(data));
-                        request("http://localhost:8080/BackEndApp/tasks?title=Tarefa 1", "DELETE").then((data) => {
-                            document.write("<hr>Deleting 'Tarefa 1':<br>");
-                            document.write(JSON.stringify(data));
-                            request("http://localhost:8080/BackEndApp/tasks", "GET").then((data) => {
-                                document.write("<hr>Getting:<br>");
-                                document.write(JSON.stringify(data));
-                            });
-                        });
-                    });
-                });
-            });
-            
         </script>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <span class="nav-brand mb-0 h1">MyTasks</span>
+            </div>
+        </nav>
+        
+        <div class="container-fluid m-2">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="New task">
+                <button type="button" class="btn btn-primary">+</button>
+            </div>
+
+            <table class="table">
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-danger btn-sm">Done</button>
+                        <span>[Tarefa]</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     </body>
 </html>
