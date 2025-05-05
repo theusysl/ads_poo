@@ -22,6 +22,22 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 return response.json();
             }
             
+            function tasks() {
+                return {
+                    newTaskTitle: "",
+                    list: [],
+                    async loadTasks() {
+                        request("/RestWebApp/tasks", "GET").then(data => {
+                            this.list = data.list;
+                        });
+                    }, async addTask() {
+                        request("/RestWebApp/tasks", "GET").then(data => {
+                            this.newTaskTitle = '';
+                            this.list = data.list;
+                        });
+                    }
+                }
+            }
         </script>
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
