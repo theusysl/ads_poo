@@ -5,6 +5,7 @@
 
 package api;
 
+import jakarta.servlet.ServletConfig;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -48,7 +49,15 @@ public class TaskServlet extends HttpServlet {
         response.setContentType("application/json;charset=UTF-8");
         JSONObject file = new JSONObject();
         try {
-            file.put("list", new JSONArray(Task.list));
+            file.put("exception",Task.exception);
+            ArrayList<Task> list = Task.getList();
+            JSONArray arr = new JSONArray();
+            for(Task t: list){
+                JSONObject o = new JSONObject();
+                o.put("title", t.getTitle());
+                arr.put(o);
+            }
+            file.put("list", arr);
         }catch(Exception ex){
             response.setStatus(500);
             file.put("error", ex.getLocalizedMessage());
@@ -72,10 +81,16 @@ public class TaskServlet extends HttpServlet {
             JSONObject body = getJSONBody(request.getReader());
             String title = body.getString("title");
             if(title != null){
-                Task t = new Task(title);
-                Task.list.add(t);
+                Task.addTask(title);
             }
-            file.put("list", new JSONArray(Task.list));
+            ArrayList<Task> list = Task.getList();
+            JSONArray arr = new JSONArray();
+            for(Task t: list){
+                JSONObject o = new JSONObject();
+                o.put("title", t.getTitle());
+                arr.put(o);
+            }
+            file.put("list", arr);
         }catch(Exception ex){
             response.setStatus(500);
             file.put("error", ex.getLocalizedMessage());
@@ -97,15 +112,15 @@ public class TaskServlet extends HttpServlet {
         JSONObject file = new JSONObject();
         try {
             String title = request.getParameter("title");
-            int i = -1;
-            for(Task t: Task.list){
-                if(t.getTitle().equals(title)){
-                    i = Task.list.indexOf(t);
-                    break;
-                }
+            Task.removeTask(title);
+            ArrayList<Task> list = Task.getList();
+            JSONArray arr = new JSONArray();
+            for(Task t: list){
+                JSONObject o = new JSONObject();
+                o.put("title", t.getTitle());
+                arr.put(o);
             }
-            if(i>=0) Task.list.remove(i);
-            file.put("list", new JSONArray(Task.list));
+            file.put("list", arr);
         }catch(Exception ex){
             response.setStatus(500); //Internal error
             file.put("error", ex.getLocalizedMessage());
@@ -120,6 +135,12 @@ public class TaskServlet extends HttpServlet {
     @Override
     public String getServletInfo() {
         return "Short description";
+    }// </editor-fold>
+
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+        super.init(config);
+        Task.createTable();
     }// </editor-fold>
 
 }
